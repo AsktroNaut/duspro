@@ -46,30 +46,11 @@ fetch('http://159.223.67.62:1337/api/products?populate=*')
             
     );
 
-    fetch('http://159.223.67.62:1337/api/product-categories?populate=*')
-    .then(response => response.json())
-    .then(data => console.log(data));
+  
     
 
 
-    (async () => {
-        const rawResponse = await fetch('http://159.223.67.62:1337/api/ezforms/submit', {
-          method: 'POST',
-          headers: {
-            'Accept': 'application/json',
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify({  token: 'your-recaptcha-token',
-          formData:{
-            name: 'John Doe',
-            email: 'test@gmail.com',
-            message: 'Hello World'
-          } })
-        });
-        const content = await rawResponse.json();
-      
-        console.log(content);
-      })();
+    
     
 
               // <img class="secondary-img" src="http://159.223.67.62:1337${productProps.images.data[0].attributes.url}" alt="Product Images">                          
