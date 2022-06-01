@@ -3,7 +3,7 @@ console.log(productContainer);
 
 
 
-fetch('http://159.223.67.62:1337/api/products?fbclid=IwAR03UF3mWvMEGpngRvnIB469ocO7eoJ4IYw_hnzFM1ufFDsEHECqULnJwVw')
+fetch('http://159.223.67.62:1337/api/products?populate=*')
   .then(response => response.json())
   .then(allProducts => {
         
@@ -20,8 +20,8 @@ fetch('http://159.223.67.62:1337/api/products?fbclid=IwAR03UF3mWvMEGpngRvnIB469o
                     <div class="product-item">
                         <div class="product-img">
                             <a href="single-product.html?id=${product.id}">
-                                <img class="primary-img" src="${productProps.id}" alt="Product Images">
-                                <img class="secondary-img" src="${productProps.id}" alt="Product Images">
+                                <img class="primary-img" src="http://159.223.67.62:1337${productProps.images.data[0].attributes.url}" alt="Product Images">
+                                <img class="secondary-img" src="${productProps.images.data[ 1]}" alt="Product Images">
                             </a>
                             
                         </div>
@@ -46,5 +46,30 @@ fetch('http://159.223.67.62:1337/api/products?fbclid=IwAR03UF3mWvMEGpngRvnIB469o
             
     );
 
+    fetch('http://159.223.67.62:1337/api/product-categories?populate=*')
+    .then(response => response.json())
+    .then(data => console.log(data));
+    
+
+
+    (async () => {
+        const rawResponse = await fetch('http://159.223.67.62:1337/api/ezforms/submit', {
+          method: 'POST',
+          headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({  token: 'your-recaptcha-token',
+          formData:{
+            name: 'John Doe',
+            email: 'test@gmail.com',
+            message: 'Hello World'
+          } })
+        });
+        const content = await rawResponse.json();
+      
+        console.log(content);
+      })();
+    
 
                                         
