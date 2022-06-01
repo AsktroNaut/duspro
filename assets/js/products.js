@@ -20,8 +20,8 @@ fetch('http://159.223.67.62:1337/api/products?populate=*')
                     <div class="product-item">
                         <div class="product-img">
                             <a href="single-product.html?id=${product.id}">
-                                <img class="primary-img" src="http://159.223.67.62:1337${productProps.images.data[0].attributes.url}" alt="Product Images">
-                                <img class="secondary-img" src="${productProps.images.data[ 1]}" alt="Product Images">
+                                <img class="primary-img" src="http://159.223.67.62:1337${productProps.thumbnail.data.attributes.url}" alt="Product Images">
+                                
                             </a>
                             
                         </div>
@@ -72,4 +72,4 @@ fetch('http://159.223.67.62:1337/api/products?populate=*')
       })();
     
 
-                                        
+              // <img class="secondary-img" src="http://159.223.67.62:1337${productProps.images.data[0].attributes.url}" alt="Product Images">                          
