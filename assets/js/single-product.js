@@ -31,18 +31,18 @@ fetch('http://159.223.67.62:1337/api/products?populate=*')
                                         <img class="img-full" src="http://159.223.67.62:1337${item.images.data[0].attributes.url}" alt="Product Image">
                                     </a>
                                 </div><div class="swiper-slide swiper-slide-duplicate swiper-slide-prev" data-swiper-slide-index="3" role="group" aria-label="3 / 10" style="width: 454px;">
-                                    <a href="http://159.223.67.62:1337${item.thumbnail.data.attributes.url}" class="single-img gallery-popup">
-                                        <img class="img-full" src="http://159.223.67.62:1337${item.thumbnail.data.attributes.url}" alt="Product Image">
+                                    <a href="http://159.223.67.62:1337${item.thumbnail.data[1].attributes.url}" class="single-img gallery-popup">
+                                        <img class="img-full" src="http://159.223.67.62:1337${item.thumbnail.data[1].attributes.url}" alt="Product Image">
                                     </a>
                                 </div>
                                 <div class="swiper-slide swiper-slide-active" data-swiper-slide-index="0" role="group" aria-label="4 / 10" style="width: 454px;">
-                                    <a href="http://159.223.67.62:1337${item.images.data[2].attributes.url}" class="single-img gallery-popup">
-                                        <img class="img-full" src="http://159.223.67.62:1337${item.images.data[2].attributes.url}" alt="Product Image">
+                                    <a href="http://159.223.67.62:1337${item.thumbnail.data[1].attributes.url}" class="single-img gallery-popup">
+                                        <img class="img-full" src="http://159.223.67.62:1337${item.thumbnail.data[1].attributes.url}" alt="Product Image">
                                     </a>
                                 </div>
                                 <div class="swiper-slide swiper-slide-next" data-swiper-slide-index="1" role="group" aria-label="5 / 10" style="width: 454px;">
-                                    <a href="http://159.223.67.62:1337${item.thumbnail.data.attributes.url}" class="single-img gallery-popup">
-                                        <img class="img-full" src="http://159.223.67.62:1337${item.thumbnail.data.attributes.url}" alt="Product Image">
+                                    <a href="http://159.223.67.62:1337${item.images.data[2].attributes.url}" class="single-img gallery-popup">
+                                        <img class="img-full" src="http://159.223.67.62:1337${item.images.data[2].attributes.url}" alt="Product Image">
                                     </a>
                                 </div>
                                 <div class="swiper-slide" data-swiper-slide-index="2" role="group" aria-label="6 / 10" style="width: 454px;">
@@ -60,8 +60,8 @@ fetch('http://159.223.67.62:1337/api/products?populate=*')
                                         <img class="img-full" src="http://159.223.67.62:1337${item.images.data[2].attributes.url}" alt="Product Image">
                                     </a>
                                 </div><div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-next" data-swiper-slide-index="1" role="group" aria-label="9 / 10" style="width: 454px;">
-                                    <a href="http://159.223.67.62:1337${item.thumbnail.data.attributes.url}" class="single-img gallery-popup">
-                                        <img class="img-full" src="http://159.223.67.62:1337${item.thumbnail.data.attributes.url}" alt="Product Image">
+                                    <a href="http://159.223.67.62:1337${item.thumbnail.data[1].attributes.url}" class="single-img gallery-popup">
+                                        <img class="img-full" src="http://159.223.67.62:1337${item.thumbnail.data[1].attributes.url}" alt="Product Image">
                                     </a>
                                 </div><div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="2" role="group" aria-label="10 / 10" style="width: 454px;">
                                     <a href="http://159.223.67.62:1337${item.images.data[0].attributes.url}" class="single-img gallery-popup">
@@ -76,8 +76,8 @@ fetch('http://159.223.67.62:1337/api/products?populate=*')
                                 <div class="swiper-wrapper" id="swiper-wrapper-7d4f8586444ebd0d" aria-live="polite" style="transform: translate3d(-336px, 0px, 0px); transition-duration: 0ms;"><a href="#" class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-next" data-swiper-slide-index="1" role="group" aria-label="1 / 10" style="width: 92px; margin-right: 20px;">
                                         <img class="img-full" src="http://159.223.67.62:1337${item.images.data[0].attributes.url}" alt="Product Thumnail">
                                     </a>
-                                    <a href="http://159.223.67.62:1337${item.thumbnail.data.attributes.url}" class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="2" role="group" aria-label="2 / 10" style="width: 92px; margin-right: 20px;">
-                                        <img class="img-full" src="http://159.223.67.62:1337${item.thumbnail.data.attributes.url}" alt="Product Thumnail">
+                                    <a href="http://159.223.67.62:1337${item.thumbnail.data[1].attributes.url}" class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="2" role="group" aria-label="2 / 10" style="width: 92px; margin-right: 20px;">
+                                        <img class="img-full" src="http://159.223.67.62:1337${item.thumbnail.data[1].attributes.url}" alt="Product Thumnail">
                                     </a>
                                     <a href="http://159.223.67.62:1337${item.images.data[1].attributes.url}" class="swiper-slide swiper-slide-duplicate swiper-slide-prev" data-swiper-slide-index="3" role="group" aria-label="3 / 10" style="width: 92px; margin-right: 20px;">
                                         <img class="img-full" src="http://159.223.67.62:1337${item.images.data[1].attributes.url}" alt="Product Thumnail">
@@ -85,8 +85,8 @@ fetch('http://159.223.67.62:1337/api/products?populate=*')
                                     <a href="http://159.223.67.62:1337${item.images.data[2].attributes.url}" class="swiper-slide swiper-slide-active" data-swiper-slide-index="0" role="group" aria-label="4 / 10" style="width: 92px; margin-right: 20px;">
                                         <img class="img-full" src="http://159.223.67.62:1337${item.images.data[2].attributes.url}" alt="Product Thumnail">
                                     </a>
-                                    <a href="http://159.223.67.62:1337${item.thumbnail.data.attributes.url}" class="swiper-slide swiper-slide-next" data-swiper-slide-index="1" role="group" aria-label="5 / 10" style="width: 92px; margin-right: 20px;">
-                                        <img class="img-full" src="http://159.223.67.62:1337${item.thumbnail.data.attributes.url}" alt="Product Thumnail">
+                                    <a href="http://159.223.67.62:1337${item.thumbnail.data[1].attributes.url}" class="swiper-slide swiper-slide-next" data-swiper-slide-index="1" role="group" aria-label="5 / 10" style="width: 92px; margin-right: 20px;">
+                                        <img class="img-full" src="http://159.223.67.62:1337${item.thumbnail.data[1].attributes.url}" alt="Product Thumnail">
                                     </a>
                                     <a href="http://159.223.67.62:1337${item.images.data[0].attributes.url}" class="swiper-slide" data-swiper-slide-index="2" role="group" aria-label="6 / 10" style="width: 92px; margin-right: 20px;">
                                         <img class="img-full" src="http://159.223.67.62:1337${item.images.data[0].attributes.url}" alt="Product Thumnail">
@@ -97,7 +97,7 @@ fetch('http://159.223.67.62:1337/api/products?populate=*')
                                     <a href="#" class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-active" data-swiper-slide-index="0" role="group" aria-label="8 / 10" style="width: 92px; margin-right: 20px;">
                                         <img class="img-full" src="http://159.223.67.62:1337${item.images.data[2].attributes.url}" alt="Product Thumnail">
                                     </a><a href="#" class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-next" data-swiper-slide-index="1" role="group" aria-label="9 / 10" style="width: 92px; margin-right: 20px;">
-                                        <img class="img-full" src="http://159.223.67.62:1337${item.thumbnail.data.attributes.url}" alt="Product Thumnail">
+                                        <img class="img-full" src="http://159.223.67.62:1337${item.thumbnail.data[1].attributes.url}" alt="Product Thumnail">
                                     </a><a href="#" class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="2" role="group" aria-label="10 / 10" style="width: 92px; margin-right: 20px;">
                                         <img class="img-full" src="http://159.223.67.62:1337${item.images.data[0].attributes.url}" alt="Product Thumnail">
                                     </a></div>
