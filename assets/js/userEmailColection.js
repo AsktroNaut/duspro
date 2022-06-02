@@ -24,8 +24,10 @@ userEmailForm.addEventListener('submit', (e) => {
             } })
             });
             const content = await rawResponse.json();
-        
+            
             console.log(content);
+            alert("Đăng kí nhận thông tin thành công!")
+            
         })();
 })
 

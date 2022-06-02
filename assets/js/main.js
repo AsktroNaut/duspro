@@ -435,7 +435,9 @@
     }
 
     /* ---Single Product Slider--- */
-    if ($('.single-product-slider').elExists()) {
+    if (!$('.single-product-slider').elExists()) {
+        console.log('chạy slider');
+            
         const multipleSwiperSlides = function () {
             let sliderMain = document.querySelectorAll(
                 '.single-product-slider'
