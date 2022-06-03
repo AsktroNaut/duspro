@@ -6,6 +6,7 @@ console.log(categorySection);
 fetch('http://159.223.67.62:1337/api/product-categories?populate=*')
   .then(response => response.json())
   .then(data => {
+      console.log(data);
         const renderHtml = document.querySelector('.drop-menu')
         
         console.log(renderHtml)
