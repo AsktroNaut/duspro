@@ -1,5 +1,5 @@
 const productContainer = document.querySelector('.product-grid-view')
-console.log(productContainer);
+
 
 
 
@@ -7,7 +7,7 @@ fetch('http://159.223.67.62:1337/api/products?populate=*')
   .then(response => response.json())
   .then(allProducts => {
         
-       console.log(allProducts.data);
+
 
         allProducts.data.map(product => {
             const productProps = product.attributes
@@ -38,7 +38,7 @@ fetch('http://159.223.67.62:1337/api/products?populate=*')
                 
             `
             productItemHTML.innerHTML = productContentHtml
-        console.log(productItemHTML);
+      
         productContainer.appendChild(productItemHTML)
         }
         )

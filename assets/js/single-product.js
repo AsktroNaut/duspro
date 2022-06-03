@@ -1,20 +1,20 @@
 
 let urlProductId =  location.search.split('id=')[1]
-console.log(urlProductId);
+
 
 fetch('http://159.223.67.62:1337/api/products?populate=*')
   .then(response => response.json())
   .then(productList => {
-        console.log(productList)
+        
 
         let productDetail = productList.data.filter((item) => {
             return item.id == urlProductId
         })
-        console.log(productDetail);
+        
         let productItemHTML = document.createElement('div')
         
         let item = productDetail[0].attributes
-        console.log(item);
+        
         let productDetailHtml = `
         <div class="container">
             <div class="row">

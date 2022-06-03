@@ -5,6 +5,6 @@ searchBox.addEventListener('submit', (e) => {
     e.preventDefault()
 
     let searchKey = searchBox['Search...'].value
-    window.location.href = 'product-search-result.html'
+    window.location.href = `product-search-result.html?id-search=${searchKey}`
 })
 

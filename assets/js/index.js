@@ -7,7 +7,7 @@ fetch('http://159.223.67.62:1337/api/products?populate=*')
   .then(response => response.json())
   .then(data => {
         let listProductOnHomeBestSeller =  data.data.filter(item => item.id < 5)
-        console.log(listProductOnHomeBestSeller);
+     
 
         listProductOnHomeBestSeller.map(item => {
             const product = item.attributes
@@ -46,7 +46,7 @@ fetch('http://159.223.67.62:1337/api/products?populate=*')
             listProductOnHomeFeatured = data.data.filter(item => item.id > 2 )
         }
         
-        console.log(listProductOnHomeFeatured);
+     
 
         listProductOnHomeFeatured.map(item => {
             const product = item.attributes
@@ -74,15 +74,13 @@ fetch('http://159.223.67.62:1337/api/products?populate=*')
             `
             productOnHomeHTML.innerHTML = productContent
             productMainSectionFeatured.appendChild(productOnHomeHTML)
-            console.log('123');
+            
         })
 
       
   })
 
-console.log(productMainSectionBestSeller);
- 
-console.log(productMainSectionFeatured);
+
   
   
 
