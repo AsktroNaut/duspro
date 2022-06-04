@@ -1,15 +1,24 @@
+let productCategory =  location.search.split('id-category=')[1]
+productCategory = productCategory.replace(/%20+/g," ");
+
+console.log(productCategory);
 const productContainer = document.querySelector('.product-grid-view')
+const shopHeading = document.querySelector('.shop-heading')
 
-
-
-
+shopHeading.innerText = productCategory
 fetch('http://159.223.67.62:1339/api/products?populate=*')
   .then(response => response.json())
-  .then(allProducts => {
-        
+  .then(data => {
+        console.log(data);
 
 
-        allProducts.data.map(product => {
+        let productOfCategoryList = data.data.filter(item => {
+            return item.attributes.product_categories.data[0].attributes.name == productCategory
+        })
+        console.log(productOfCategoryList);
+
+
+        productOfCategoryList.map(product => {
             const productProps = product.attributes
 
             let productItemHTML = document.createElement('div')
@@ -42,15 +51,5 @@ fetch('http://159.223.67.62:1339/api/products?populate=*')
         productContainer.appendChild(productItemHTML)
         }
         )
-        }
-            
-    );
-
-  
-    
-
-
-    
-    
-
-              // <img class="secondary-img" src="http://159.223.67.62:1339${productProps.images.data[0].attributes.url}" alt="Product Images">                          
+        
+  });
