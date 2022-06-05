@@ -3,7 +3,7 @@
 const productMainSectionBestSeller = document.querySelectorAll('.product-item-wrap')[0]
 const productMainSectionFeatured = document.querySelectorAll('.product-item-wrap')[1]
 
-fetch('http://159.223.67.62:1337/api/products?populate=*')
+fetch('http://159.223.67.62:1339/api/products?populate=*')
   .then(response => response.json())
   .then(data => {
         let listProductOnHomeBestSeller =  data.data.filter(item => item.id < 5)
@@ -19,8 +19,8 @@ fetch('http://159.223.67.62:1337/api/products?populate=*')
             <div class="product-item">
                 <div class="product-img">
                     <a href="single-product.html?id=${item.id}">
-                        <img class="primary-img" src="http://159.223.67.62:1337${product.thumbnail.data[0].attributes.url}" alt="Product Images">
-                        <img class="secondary-img" src="http://159.223.67.62:1337${product.images.data[0].attributes.url}" alt="Product Images">
+                        <img class="primary-img" src="http://159.223.67.62:1339${product.thumbnail.data[0].attributes.url}" alt="Product Images">
+                        <img class="secondary-img" src="http://159.223.67.62:1339${product.images.data[0].attributes.url}" alt="Product Images">
                     </a>
                     
                 </div>
@@ -58,8 +58,8 @@ fetch('http://159.223.67.62:1337/api/products?populate=*')
             <div class="product-item">
                 <div class="product-img">
                     <a href="single-product.html?id=${item.id}">
-                        <img class="primary-img" src="http://159.223.67.62:1337${product.thumbnail.data[0].attributes.url}" alt="Product Images">
-                        <img class="secondary-img" src="http://159.223.67.62:1337${product.images.data[0].attributes.url}" alt="Product Images">
+                        <img class="primary-img" src="http://159.223.67.62:1339${product.thumbnail.data[0].attributes.url}" alt="Product Images">
+                        <img class="secondary-img" src="http://159.223.67.62:1339${product.images.data[0].attributes.url}" alt="Product Images">
                     </a>
                     
                 </div>

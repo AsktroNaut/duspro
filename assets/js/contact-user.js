@@ -14,7 +14,7 @@ contactForm.addEventListener('submit', (e) => {
     (async () => {
 
 
-        const rawResponse = await fetch('http://159.223.67.62:1337/api/ezforms/submit', {
+        const rawResponse = await fetch('http://159.223.67.62:1339/api/ezforms/submit', {
         method: 'POST',
         headers: {
             'Accept': 'application/json',

@@ -3,7 +3,7 @@ const productContainer = document.querySelector('.product-grid-view')
 
 
 
-fetch('http://159.223.67.62:1337/api/products?populate=*')
+fetch('http://159.223.67.62:1339/api/products?populate=*')
   .then(response => response.json())
   .then(allProducts => {
         
@@ -20,8 +20,8 @@ fetch('http://159.223.67.62:1337/api/products?populate=*')
                     <div class="product-item">
                         <div class="product-img">
                             <a href="single-product.html?id=${product.id}">
-                                <img class="primary-img" src="http://159.223.67.62:1337${productProps.thumbnail.data[0].attributes.url}" alt="Product Images">
-                                <img class="secondary-img" src="http://159.223.67.62:1337${productProps.images.data[0].attributes.url}" alt="Product Images">
+                                <img class="primary-img" src="http://159.223.67.62:1339${productProps.thumbnail.data[0].attributes.url}" alt="Product Images">
+                                <img class="secondary-img" src="http://159.223.67.62:1339${productProps.images.data[0].attributes.url}" alt="Product Images">
                             </a>
                             
                         </div>
@@ -53,4 +53,4 @@ fetch('http://159.223.67.62:1337/api/products?populate=*')
     
     
 
-              // <img class="secondary-img" src="http://159.223.67.62:1337${productProps.images.data[0].attributes.url}" alt="Product Images">                          
+              // <img class="secondary-img" src="http://159.223.67.62:1339${productProps.images.data[0].attributes.url}" alt="Product Images">                          
