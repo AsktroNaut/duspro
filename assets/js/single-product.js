@@ -6,15 +6,15 @@ fetch('http://159.223.67.62:1339/api/products?populate=*')
   .then(response => response.json())
   .then(productList => {
         
-
+        
         let productDetail = productList.data.filter((item) => {
             return item.id == urlProductId
         })
-        
+       
         let productItemHTML = document.createElement('div')
         
         let item = productDetail[0].attributes
-        
+        console.log(item);
         let productDetailHtml = `
         <div class="container">
             <div class="row">
@@ -22,49 +22,52 @@ fetch('http://159.223.67.62:1339/api/products?populate=*')
 
                     <div class="single-product-img">
                         <div class="swiper-container single-product-slider swiper-container-initialized swiper-container-horizontal swiper-container-pointer-events">
-                            <div class="swiper-wrapper" id="swiper-wrapper-f4c0efcd10dd512810" aria-live="polite" style="transform: translate3d(-1362px, 0px, 0px); transition-duration: 0ms;"><div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-next" data-swiper-slide-index="1" role="group" aria-label="1 / 10" style="width: 454px;">
-                                    <a href="#" class="single-img gallery-popup">
-                                        <img class="img-full" src="http://159.223.67.62:1339${item.images.data[1].attributes.url}" alt="Product Image">
-                                    </a>
-                                </div><div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="2" role="group" aria-label="2 / 10" style="width: 454px;">
-                                    <a href="#" class="single-img gallery-popup">
-                                        <img class="img-full" src="http://159.223.67.62:1339${item.images.data[0].attributes.url}" alt="Product Image">
-                                    </a>
-                                </div><div class="swiper-slide swiper-slide-duplicate swiper-slide-prev" data-swiper-slide-index="3" role="group" aria-label="3 / 10" style="width: 454px;">
-                                    <a href="#" class="single-img gallery-popup">
-                                        <img class="img-full" src="http://159.223.67.62:1339${item.thumbnail.data[1].attributes.url}" alt="Product Image">
-                                    </a>
-                                </div>
-                                <div class="swiper-slide swiper-slide-active" data-swiper-slide-index="0" role="group" aria-label="4 / 10" style="width: 454px;">
-                                    <a href="http://159.223.67.62:1339${item.thumbnail.data[1].attributes.url}" class="single-img gallery-popup">
-                                        <img class="img-full" src="http://159.223.67.62:1339${item.thumbnail.data[1].attributes.url}" alt="Product Image">
-                                    </a>
-                                </div>
-                                <div class="swiper-slide swiper-slide-next" data-swiper-slide-index="1" role="group" aria-label="5 / 10" style="width: 454px;">
-                                    <a href="http://159.223.67.62:1339${item.images.data[2].attributes.url}" class="single-img gallery-popup">
-                                        <img class="img-full" src="http://159.223.67.62:1339${item.images.data[2].attributes.url}" alt="Product Image">
-                                    </a>
-                                </div>
-                                <div class="swiper-slide" data-swiper-slide-index="2" role="group" aria-label="6 / 10" style="width: 454px;">
-                                    <a href="http://159.223.67.62:1339${item.images.data[0].attributes.url}" class="single-img gallery-popup">
-                                        <img class="img-full" src="http://159.223.67.62:1339${item.images.data[0].attributes.url}" alt="Product Image">
-                                    </a>
-                                </div>
-                                <div class="swiper-slide swiper-slide-duplicate-prev" data-swiper-slide-index="3" role="group" aria-label="7 / 10" style="width: 454px;">
+                            <div class="swiper-wrapper" id="swiper-wrapper-f4c0efcd10dd512810" aria-live="polite" style="transform: translate3d(-1362px, 0px, 0px); transition-duration: 0ms;">
+                                <div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-next" data-swiper-slide-index="1" role="group" aria-label="1 / 10" style="width: 454px;">
                                     <a href="http://159.223.67.62:1339${item.images.data[1].attributes.url}" class="single-img gallery-popup">
                                         <img class="img-full" src="http://159.223.67.62:1339${item.images.data[1].attributes.url}" alt="Product Image">
                                     </a>
                                 </div>
-                                <div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-active" data-swiper-slide-index="0" role="group" aria-label="8 / 10" style="width: 454px;">
-                                    <a href="#" class="single-img gallery-popup">
+                                <div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="2" role="group" aria-label="2 / 10" style="width: 454px;">
+                                    <a href="http://159.223.67.62:1339${item.images.data[2].attributes.url}" class="single-img gallery-popup">
                                         <img class="img-full" src="http://159.223.67.62:1339${item.images.data[2].attributes.url}" alt="Product Image">
                                     </a>
+                                </div>
+                                <div class="swiper-slide swiper-slide-duplicate swiper-slide-prev" data-swiper-slide-index="3" role="group" aria-label="3 / 10" style="width: 454px;">
+                                    <a href="http://159.223.67.62:1339${item.images.data[3].attributes.url}" class="single-img gallery-popup">
+                                        <img class="img-full" src="http://159.223.67.62:1339${item.images.data[3].attributes.url}" alt="Product Image">
+                                    </a>
+                                </div>
+                                <div class="swiper-slide swiper-slide-active" data-swiper-slide-index="0" role="group" aria-label="4 / 10" style="width: 454px;">
+                                    <a href="http://159.223.67.62:1339${item.images.data[4].attributes.url}" class="single-img gallery-popup">
+                                        <img class="img-full" src="http://159.223.67.62:1339${item.images.data[4].attributes.url}" alt="Product Image">
+                                    </a>
+                                </div>
+                                <div class="swiper-slide swiper-slide-next" data-swiper-slide-index="1" role="group" aria-label="5 / 10" style="width: 454px;">
+                                    <a href="http://159.223.67.62:1339${item.images.data[0].attributes.url}" class="single-img gallery-popup">
+                                        <img class="img-full" src="http://159.223.67.62:1339${item.images.data[0].attributes.url}" alt="Product Image">
+                                    </a>
+                                </div>
+                                <div class="swiper-slide" data-swiper-slide-index="2" role="group" aria-label="6 / 10" style="width: 454px;">
+                                    <a href="http://159.223.67.62:1339${item.images.data[1].attributes.url}" class="single-img gallery-popup">
+                                        <img class="img-full" src="http://159.223.67.62:1339${item.images.data[1].attributes.url}" alt="Product Image">
+                                    </a>
+                                </div>
+                                <div class="swiper-slide swiper-slide-duplicate-prev" data-swiper-slide-index="3" role="group" aria-label="7 / 10" style="width: 454px;">
+                                    <a href="http://159.223.67.62:1339${item.images.data[2].attributes.url}" class="single-img gallery-popup">
+                                        <img class="img-full" src="http://159.223.67.62:1339${item.images.data[2].attributes.url}" alt="Product Image">
+                                    </a>
+                                </div>
+                                <div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-active" data-swiper-slide-index="0" role="group" aria-label="8 / 10" style="width: 454px;">
+                                    <a href="http://159.223.67.62:1339${item.images.data[3].attributes.url}" class="single-img gallery-popup">
+                                        <img class="img-full" src="http://159.223.67.62:1339${item.images.data[3].attributes.url}" alt="Product Image">
+                                    </a>
                                 </div><div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-next" data-swiper-slide-index="1" role="group" aria-label="9 / 10" style="width: 454px;">
-                                    <a href="#" class="single-img gallery-popup">
-                                        <img class="img-full" src="http://159.223.67.62:1339${item.thumbnail.data[1].attributes.url}" alt="Product Image">
+                                    <a href="http://159.223.67.62:1339${item.images.data[4].attributes.url}" class="single-img gallery-popup">
+                                        <img class="img-full" src="http://159.223.67.62:1339${item.images.data[4].attributes.url}" alt="Product Image">
                                     </a>
                                 </div><div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="2" role="group" aria-label="10 / 10" style="width: 454px;">
-                                    <a href="#" class="single-img gallery-popup">
+                                    <a href="http://159.223.67.62:1339${item.images.data[0].attributes.url}" class="single-img gallery-popup">
                                         <img class="img-full" src="http://159.223.67.62:1339${item.images.data[0].attributes.url}" alt="Product Image">
                                     </a>
                                 </div>
@@ -73,34 +76,38 @@ fetch('http://159.223.67.62:1339/api/products?populate=*')
                         </div>
                         <div class="thumbs-arrow-holder">
                             <div class="swiper-container single-product-thumbs swiper-container-initialized swiper-container-horizontal swiper-container-pointer-events">
-                                <div class="swiper-wrapper" id="swiper-wrapper-7d4f8586444ebd0d" aria-live="polite" style="transform: translate3d(-336px, 0px, 0px); transition-duration: 0ms;"><a href="#" class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-next" data-swiper-slide-index="1" role="group" aria-label="1 / 10" style="width: 92px; margin-right: 20px;">
-                                        <img class="img-full" src="http://159.223.67.62:1339${item.images.data[0].attributes.url}" alt="Product Thumnail">
-                                    </a>
-                                    <a href="#" class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="2" role="group" aria-label="2 / 10" style="width: 92px; margin-right: 20px;">
-                                        <img class="img-full" src="http://159.223.67.62:1339${item.thumbnail.data[1].attributes.url}" alt="Product Thumnail">
-                                    </a>
-                                    <a href="#" class="swiper-slide swiper-slide-duplicate swiper-slide-prev" data-swiper-slide-index="3" role="group" aria-label="3 / 10" style="width: 92px; margin-right: 20px;">
+                                <div class="swiper-wrapper" id="swiper-wrapper-7d4f8586444ebd0d" aria-live="polite" style="transform: translate3d(-336px, 0px, 0px); transition-duration: 0ms;">
+                                    <div href="#" class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-next" data-swiper-slide-index="1" role="group" aria-label="1 / 10" style="width: 92px; margin-right: 20px;">
                                         <img class="img-full" src="http://159.223.67.62:1339${item.images.data[1].attributes.url}" alt="Product Thumnail">
-                                    </a>
-                                    <a href="#" class="swiper-slide swiper-slide-active" data-swiper-slide-index="0" role="group" aria-label="4 / 10" style="width: 92px; margin-right: 20px;">
+                                    </div>
+                                    <div href="#" class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="2" role="group" aria-label="2 / 10" style="width: 92px; margin-right: 20px;">
                                         <img class="img-full" src="http://159.223.67.62:1339${item.images.data[2].attributes.url}" alt="Product Thumnail">
-                                    </a>
-                                    <a href="#" class="swiper-slide swiper-slide-next" data-swiper-slide-index="1" role="group" aria-label="5 / 10" style="width: 92px; margin-right: 20px;">
-                                        <img class="img-full" src="http://159.223.67.62:1339${item.thumbnail.data[1].attributes.url}" alt="Product Thumnail">
-                                    </a>
-                                    <a href="#" class="swiper-slide" data-swiper-slide-index="2" role="group" aria-label="6 / 10" style="width: 92px; margin-right: 20px;">
+                                    </div>
+                                    <div href="#" class="swiper-slide swiper-slide-duplicate swiper-slide-prev" data-swiper-slide-index="3" role="group" aria-label="3 / 10" style="width: 92px; margin-right: 20px;">
+                                        <img class="img-full" src="http://159.223.67.62:1339${item.images.data[3].attributes.url}" alt="Product Thumnail">
+                                    </div>
+                                    <div href="#" class="swiper-slide swiper-slide-active" data-swiper-slide-index="0" role="group" aria-label="4 / 10" style="width: 92px; margin-right: 20px;">
+                                        <img class="img-full" src="http://159.223.67.62:1339${item.images.data[4].attributes.url}" alt="Product Thumnail">
+                                    </div>
+                                    <div href="#" class="swiper-slide swiper-slide-next" data-swiper-slide-index="1" role="group" aria-label="5 / 10" style="width: 92px; margin-right: 20px;">
                                         <img class="img-full" src="http://159.223.67.62:1339${item.images.data[0].attributes.url}" alt="Product Thumnail">
-                                    </a>
-                                    <a href="#" class="swiper-slide swiper-slide-duplicate-prev" data-swiper-slide-index="3" role="group" aria-label="7 / 10" style="width: 92px; margin-right: 20px;">
+                                    </div>
+                                    <div href="#" class="swiper-slide" data-swiper-slide-index="2" role="group" aria-label="6 / 10" style="width: 92px; margin-right: 20px;">
                                         <img class="img-full" src="http://159.223.67.62:1339${item.images.data[1].attributes.url}" alt="Product Thumnail">
-                                    </a>
-                                    <a href="#" class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-active" data-swiper-slide-index="0" role="group" aria-label="8 / 10" style="width: 92px; margin-right: 20px;">
+                                    </div>
+                                    <div href="#" class="swiper-slide swiper-slide-duplicate-prev" data-swiper-slide-index="3" role="group" aria-label="7 / 10" style="width: 92px; margin-right: 20px;">
                                         <img class="img-full" src="http://159.223.67.62:1339${item.images.data[2].attributes.url}" alt="Product Thumnail">
-                                    </a><a href="#" class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-next" data-swiper-slide-index="1" role="group" aria-label="9 / 10" style="width: 92px; margin-right: 20px;">
-                                        <img class="img-full" src="http://159.223.67.62:1339${item.thumbnail.data[1].attributes.url}" alt="Product Thumnail">
-                                    </a><a href="#" class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="2" role="group" aria-label="10 / 10" style="width: 92px; margin-right: 20px;">
+                                    </div>
+                                    <div href="#" class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-active" data-swiper-slide-index="0" role="group" aria-label="8 / 10" style="width: 92px; margin-right: 20px;">
+                                        <img class="img-full" src="http://159.223.67.62:1339${item.images.data[3].attributes.url}" alt="Product Thumnail">
+                                    </div>
+                                    <div href="#" class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-next" data-swiper-slide-index="1" role="group" aria-label="9 / 10" style="width: 92px; margin-right: 20px;">
+                                        <img class="img-full" src="http://159.223.67.62:1339${item.images.data[4].attributes.url}" alt="Product Thumnail">
+                                    </div>
+                                    <div href="#" class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="2" role="group" aria-label="10 / 10" style="width: 92px; margin-right: 20px;">
                                         <img class="img-full" src="http://159.223.67.62:1339${item.images.data[0].attributes.url}" alt="Product Thumnail">
-                                    </a></div>
+                                    </div>
+                                </div>
                                 <!-- Add Arrows -->
                                 <div class=" thumbs-button-wrap d-none d-md-block">
                                     
