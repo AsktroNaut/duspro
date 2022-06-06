@@ -15,7 +15,7 @@ fetch('http://159.223.67.62:1339/api/product-categories?populate=*')
             console.log(item);
             const parentsHtml = document.createElement('li')
             const childrenhtml = `
-            <a href="product-category-shop.html?id-category=${item.attributes.name}">${item.attributes.name}</a>
+            <a href="">${item.attributes.name}</a>
             `
             parentsHtml.innerHTML= childrenhtml
                 
@@ -36,31 +36,4 @@ fetch('http://159.223.67.62:1339/api/product-categories?populate=*')
     }
         
   )
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 

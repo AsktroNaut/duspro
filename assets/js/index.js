@@ -6,7 +6,6 @@ const productMainSectionFeatured = document.querySelectorAll('.product-item-wrap
 fetch('http://159.223.67.62:1339/api/products?populate=*')
   .then(response => response.json())
   .then(data => {
-        console.log(data);
         let listProductOnHomeBestSeller =  data.data.filter(item => item.id < 5)
      
 
@@ -83,10 +82,7 @@ fetch('http://159.223.67.62:1339/api/products?populate=*')
 
 
   
-  fetch('http://159.223.67.62:1339/api/product-categories?populate=*')
-  .then(response => response.json())
-  .then(data => console.log("new",data));
-
+  
 
 
 

@@ -72,7 +72,6 @@
                                                 <i class="pe-7s-users"></i>
                                             </button>
                                             <ul class="dropdown-menu" aria-labelledby="settingButton">
-                                                <li><a class="dropdown-item" href="my-account.html">My account</a></li>
                                                 <li><a class="dropdown-item" href="login-register.html">Login | Register</a>
                                                 </li>
                                             </ul>
@@ -108,19 +107,7 @@
                                         <li class="megamenu-holder">
                                             <a href="shop.html">Products</a>
                                             <ul class="drop-menu megamenu">
-                                                <li>
-                                                    <a href="">Forest Moss Pole</a>
-                                                    
-                                                </li>
-                                                <li>
-                                                    <a href="">Orchid Accessories</a>
-                                                    
-                                                    
-                                                </li>
-                                                <li>
-                                                    <a href="">Carnivorous Accessories</a>
-
-                                                </li>
+                                               
                                             </ul>
                                         </li>
                                         <li>
@@ -165,19 +152,7 @@
                                             <li class="megamenu-holder">
                                                 <a href="shop.html">Products</a>
                                                 <ul class="drop-menu megamenu">
-                                                    <li>
-                                                        <a href="">Forest Moss Pole</a>
-                                                        
-                                                    </li>
-                                                    <li>
-                                                        <a href="">Orchid Accessories</a>
-                                                        
-                                                        
-                                                    </li>
-                                                    <li>
-                                                        <a href="">Carnivorous Accessories</a>
-    
-                                                    </li>
+                                                   
                                                 </ul>
                                             </li>
                                             <li>
@@ -205,7 +180,6 @@
                                                 <i class="pe-7s-users"></i>
                                             </button>
                                             <ul class="dropdown-menu" aria-labelledby="stickysettingButton">
-                                                <li><a class="dropdown-item" href="my-account.html">My account</a></li>
                                                 <li><a class="dropdown-item" href="login-register.html">Login | Register</a>
                                                 </li>
                                             </ul>
@@ -244,7 +218,6 @@
                                         <i class="pe-7s-users"></i>
                                     </button>
                                     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="settingButtonTwo">
-                                        <li><a class="dropdown-item" href="my-account.html">My account</a></li>
                                         <li><a class="dropdown-item" href="login-register.html">Login | Register</a></li>
                                     </ul>
                                 </li>
@@ -348,17 +321,17 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-6">
-                            <form action="#">
+                            <form id="login-form" action="#">
                                 <div class="login-form">
                                     <h4 class="login-title">Login</h4>
                                     <div class="row">
                                         <div class="col-lg-12">
                                             <label>Email Address*</label>
-                                            <input type="email" placeholder="Email Address">
+                                            <input type="email" class="login-email" placeholder="Email Address" required>
                                         </div>
                                         <div class="col-lg-12">
                                             <label>Password</label>
-                                            <input type="password" placeholder="Password">
+                                            <input type="password" class="login-password" placeholder="Password" required>
                                         </div>
                                         <div class="col-md-8">
                                             <div class="check-box">
@@ -379,29 +352,29 @@
                             </form>
                         </div>
                         <div class="col-lg-6 pt-5 pt-lg-0">
-                            <form action="#">
+                            <form id="register-form" action="">
                                 <div class="login-form">
                                     <h4 class="login-title">Register</h4>
                                     <div class="row">
                                         <div class="col-md-6 col-12">
                                             <label>First Name</label>
-                                            <input type="text" placeholder="First Name">
+                                            <input type="text" class="register-first-name" placeholder="First Name" required>
                                         </div>
                                         <div class="col-md-6 col-12">
                                             <label>Last Name</label>
-                                            <input type="text" placeholder="Last Name">
+                                            <input type="text" class="register-last-name" placeholder="Last Name" required required>
                                         </div>
                                         <div class="col-md-12">
                                             <label>Email Address*</label>
-                                            <input type="email" placeholder="Email Address">
+                                            <input type="email" class="register-email" placeholder="Email Address" required>
                                         </div>
                                         <div class="col-md-6">
                                             <label>Password</label>
-                                            <input type="password" placeholder="Password">
+                                            <input type="password" class="register-password" placeholder="Password" required>
                                         </div>
                                         <div class="col-md-6">
                                             <label>Confirm Password</label>
-                                            <input type="password" placeholder="Confirm Password">
+                                            <input type="password" class="register-confirm-password" placeholder="Confirm Password" required>
                                         </div>
                                         <div class="col-12">
                                             <button class="btn btn-custom-size lg-size btn-pronia-primary">Register</button>
@@ -544,7 +517,7 @@
     <script src="assets/js/main.js"></script>
     <script src="./assets/js/userEmailColection.js"></script>
     <script src="./assets/js/category.js"></script>
-
+    <script src="./assets/js/register-login.js"></script>
 </body>
 
 </html>
