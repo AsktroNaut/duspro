@@ -49,16 +49,16 @@ fetch('http://159.223.67.62:1339/api/products?populate=*')
                             <div class="swiper-wrapper">
                                 ${item.thumbnail.data.map(image => {
                                     return `
-                                    <a href="#" class="swiper-slide">
+                                    <div class="swiper-slide">
                                         <img class="img-full" src="${apiUrl + image.attributes.url}" alt="Product Thumnail">
-                                    </a>
+                                    </div>
                                     `
                                 })}
                                 ${item.images.data.map(image => {
                                     return `
-                                    <a href="#" class="swiper-slide">
+                                    <div class="swiper-slide">
                                         <img class="img-full" src="${apiUrl + image.attributes.url}" alt="Product Thumnail">
-                                    </a>
+                                    </div>
                                     `
                                 })}
                             </div>
