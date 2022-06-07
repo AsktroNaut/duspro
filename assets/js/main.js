@@ -1065,7 +1065,7 @@ function main($) {
     /* --- Product Slider--- */
     if ($('.product-slider').elExists()) {
         var mySwiper = new Swiper('.product-slider', {
-            slidesPerView: 4,
+            slidesPerView: 3,
             spaceBetween: 30,
             loop: true,
             navigation: {
@@ -1094,7 +1094,7 @@ function main($) {
         var mySwiper = new Swiper('.product-list-slider', {
             slidesPerView: 3,
             spaceBetween: 30,
-            loop: false,
+            loop: true,
             navigation: {
                 nextEl: '.swiper-button-next',
                 prevEl: '.swiper-button-prev',
