@@ -24,15 +24,7 @@ fetch('http://159.223.67.62:1339/api/products?populate=*')
                 <div class="single-product-img">
                     <div class="swiper-container single-product-slider">
                         <div class="swiper-wrapper">
-                            ${item.thumbnail.data.map(image => {
-                                return `
-                                <div class="swiper-slide">
-                                    <a href="${apiUrl + image.attributes.url}" class="single-img gallery-popup">
-                                        <img class="img-full" src="${apiUrl + image.attributes.url}" alt="Product Image">
-                                    </a>
-                                </div>
-                                `
-                            })}
+                            
                             ${item.images.data.map(image => {
                                 return `
                                 <div class="swiper-slide">
@@ -47,13 +39,7 @@ fetch('http://159.223.67.62:1339/api/products?populate=*')
                     <div class="thumbs-arrow-holder">
                         <div class="swiper-container single-product-thumbs">
                             <div class="swiper-wrapper">
-                                ${item.thumbnail.data.map(image => {
-                                    return `
-                                    <div class="swiper-slide">
-                                        <img class="img-full" src="${apiUrl + image.attributes.url}" alt="Product Thumnail">
-                                    </div>
-                                    `
-                                })}
+                                
                                 ${item.images.data.map(image => {
                                     return `
                                     <div class="swiper-slide">

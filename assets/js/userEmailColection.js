@@ -26,7 +26,7 @@ userEmailForm.addEventListener('submit', (e) => {
             const content = await rawResponse.json();
             
             console.log(content);
-            alert("Đăng kí nhận thông tin thành công!")
+            alert("We've received your email successfully!")
             
         })();
 })
