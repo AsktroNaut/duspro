@@ -908,6 +908,7 @@ img {
   background-color: #abd373;
   border-color: #abd373;
   color: #ffffff;
+  box-shadow: 5px 5px 20px 4px #a3a3a3;
 }
 
 .btn-pronia-primary:hover {
