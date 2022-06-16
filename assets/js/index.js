@@ -7,7 +7,7 @@ fetch('http://159.223.67.62:1339/api/products?populate=*')
   .then(response => response.json())
   .then(data => {
         let listProductOnHomeBestSeller =  data.data.filter(item => item.id < 5)
-     
+        console.log(listProductOnHomeBestSeller);
 
         listProductOnHomeBestSeller.map(item => {
             const product = item.attributes
@@ -20,7 +20,7 @@ fetch('http://159.223.67.62:1339/api/products?populate=*')
                 <div class="product-img">
                     <a href="single-product.html?id=${item.id}">
                         <img class="primary-img" src="http://159.223.67.62:1339${product.thumbnail.data[0].attributes.url}" alt="Product Images">
-                        <img class="secondary-img" src="http://159.223.67.62:1339${product.images.data[0].attributes.url}" alt="Product Images">
+                        <img class="secondary-img" src="http://159.223.67.62:1339${product.images.data[3].attributes.url}" alt="Product Images">
                     </a>
                     
                 </div>
