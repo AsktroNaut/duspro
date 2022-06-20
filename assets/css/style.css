@@ -3667,6 +3667,10 @@ blockquote p {
   display: block;
 }
 
+.swiper-slide .swiper-slide-duplicate {
+  width: 500px !important;
+}
+
 .single-product-content.with-sticky {
   position: -webkit-sticky;
   position: sticky;
