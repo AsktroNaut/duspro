@@ -73,7 +73,7 @@ fetch('http://159.223.67.62:1339/api/products?populate=*')
                         <ul style="margin-bottom: 24px" class="quantity-with-btn">
                             
                             <li class="add-to-cart">
-                                <a class="btn btn-custom-size lg-size btn-pronia-primary" href="${item.amazon_url}">BUY</a>
+                                <a class="btn btn-custom-size lg-size btn-pronia-primary" href="${item.amazon_url}"  target="_blank">BUY</a>
                             </li>
                             
                         </ul>
