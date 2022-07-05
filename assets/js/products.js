@@ -20,8 +20,8 @@ fetch(`${SERVER_URL}/api/products?populate=*`)
                     <div class="product-item">
                         <div class="product-img">
                             <a href="single-product.html?id=${product.id}">
-                                <img class="primary-img" src="${SERVER_URL}${productProps.thumbnail.data[0].attributes.url}" alt="Product Images">
-                                <img class="secondary-img" src="${SERVER_URL}${productProps.images.data[0].attributes.url}" alt="Product Images">
+                                <img class="primary-img" src="${SERVER_URL}${productProps.images.data[0].attributes.url}" alt="Product Images">
+                                <img class="secondary-img" src="${SERVER_URL}${productProps.images.data[1].attributes.url}" alt="Product Images">
                             </a>
                             
                         </div>
