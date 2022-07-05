@@ -3,11 +3,15 @@
 const productMainSectionBestSeller = document.querySelectorAll('.product-item-wrap')[0]
 const productMainSectionFeatured = document.querySelectorAll('.product-item-wrap')[1]
 
-fetch('http://159.223.67.62:1339/api/products?populate=*')
+fetch(`${SERVER_URL}/api/products?populate=*`)
   .then(response => response.json())
   .then(data => {
-        let listProductOnHomeBestSeller =  data.data.filter(item => item.id < 5)
-        console.log(listProductOnHomeBestSeller);
+
+        
+        let listProductOnHomeBestSeller = []
+        for (let index = data.data.length -1; index > data.data.length - 5; index--) {
+            listProductOnHomeBestSeller.push(data.data[index])
+        }
 
         listProductOnHomeBestSeller.map(item => {
             const product = item.attributes
@@ -19,8 +23,8 @@ fetch('http://159.223.67.62:1339/api/products?populate=*')
             <div class="product-item">
                 <div class="product-img">
                     <a href="single-product.html?id=${item.id}">
-                        <img class="primary-img" src="http://159.223.67.62:1339${product.thumbnail.data[0].attributes.url}" alt="Product Images">
-                        <img class="secondary-img" src="http://159.223.67.62:1339${product.images.data[3].attributes.url}" alt="Product Images">
+                        <img class="primary-img" src="${SERVER_URL}${product.thumbnail.data[0].attributes.url}" alt="Product Images">
+                        <img class="secondary-img" src="${SERVER_URL}${product.images.data[3].attributes.url}" alt="Product Images">
                     </a>
                     
                 </div>
@@ -40,10 +44,9 @@ fetch('http://159.223.67.62:1339/api/products?populate=*')
 
 
         
-        let listProductOnHomeFeatured
-        for (let index = 0; index < 3; index++) {
-            
-            listProductOnHomeFeatured = data.data.filter(item => item.id > 2 )
+        let listProductOnHomeFeatured = []
+        for (let index = 0; index < 4; index++) {
+            listProductOnHomeFeatured.push(data.data[index])
         }
         
      
@@ -58,8 +61,8 @@ fetch('http://159.223.67.62:1339/api/products?populate=*')
             <div class="product-item">
                 <div class="product-img">
                     <a href="single-product.html?id=${item.id}">
-                        <img class="primary-img" src="http://159.223.67.62:1339${product.thumbnail.data[0].attributes.url}" alt="Product Images">
-                        <img class="secondary-img" src="http://159.223.67.62:1339${product.images.data[3].attributes.url}" alt="Product Images">
+                        <img class="primary-img" src="${SERVER_URL}${product.thumbnail.data[0].attributes.url}" alt="Product Images">
+                        <img class="secondary-img" src="${SERVER_URL}${product.images.data[3].attributes.url}" alt="Product Images">
                     </a>
                     
                 </div>

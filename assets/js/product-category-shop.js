@@ -6,7 +6,7 @@ const productContainer = document.querySelector('.product-grid-view')
 const shopHeading = document.querySelector('.shop-heading')
 
 shopHeading.innerText = productCategory
-fetch('http://159.223.67.62:1339/api/products?populate=*')
+fetch(`${SERVER_URL}/api/products?populate=*`)
   .then(response => response.json())
   .then(data => {
         console.log(data);
@@ -29,8 +29,8 @@ fetch('http://159.223.67.62:1339/api/products?populate=*')
                     <div class="product-item">
                         <div class="product-img">
                             <a href="single-product.html?id=${product.id}">
-                                <img class="primary-img" src="http://159.223.67.62:1339${productProps.thumbnail.data[0].attributes.url}" alt="Product Images">
-                                <img class="secondary-img" src="http://159.223.67.62:1339${productProps.images.data[0].attributes.url}" alt="Product Images">
+                                <img class="primary-img" src="${SERVER_URL}${productProps.thumbnail.data[0].attributes.url}" alt="Product Images">
+                                <img class="secondary-img" src="${SERVER_URL}${productProps.images.data[0].attributes.url}" alt="Product Images">
                             </a>
                             
                         </div>

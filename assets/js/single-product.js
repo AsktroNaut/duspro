@@ -1,9 +1,7 @@
 
 let urlProductId =  location.search.split('id=')[1]
 
-const apiUrl = 'http://159.223.67.62:1339'
-
-fetch('http://159.223.67.62:1339/api/products?populate=*')
+fetch(`${SERVER_URL}/api/products?populate=*`)
   .then(response => response.json())
   .then(productList => {
         
@@ -28,8 +26,8 @@ fetch('http://159.223.67.62:1339/api/products?populate=*')
                             ${item.images.data.map(image => {
                                 return `
                                 <div class="swiper-slide">
-                                    <a href="${apiUrl + image.attributes.url}" class="single-img gallery-popup">
-                                        <img class="img-full" src="${apiUrl + image.attributes.url}" alt="Product Image">
+                                    <a href="${SERVER_URL + image.attributes.url}" class="single-img gallery-popup">
+                                        <img class="img-full" src="${SERVER_URL + image.attributes.url}" alt="Product Image">
                                     </a>
                                 </div>
                                 `
@@ -45,7 +43,7 @@ fetch('http://159.223.67.62:1339/api/products?populate=*')
                                 ${item.images.data.map(image => {
                                     return `
                                     <div class="swiper-slide">
-                                        <img class="img-full" src="${apiUrl + image.attributes.url}" alt="Product Thumnail">
+                                        <img class="img-full" src="${SERVER_URL + image.attributes.url}" alt="Product Thumnail">
                                     </div>
                                     `
                                 })}
@@ -73,7 +71,7 @@ fetch('http://159.223.67.62:1339/api/products?populate=*')
                         <ul style="margin-bottom: 24px" class="quantity-with-btn">
                             
                             <li class="add-to-cart">
-                                <a class="btn btn-custom-size lg-size btn-pronia-primary" href="${item.amazon_url}">BUY</a>
+                                <a class="btn btn-custom-size lg-size btn-pronia-primary" href="${item.amazon_url}"  target="_blank">BUY</a>
                             </li>
                             
                         </ul>

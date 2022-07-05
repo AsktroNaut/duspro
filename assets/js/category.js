@@ -5,7 +5,7 @@ console.log(categorySection);
 
 
 
-fetch('http://159.223.67.62:1339/api/product-categories?populate=*')
+fetch(`${SERVER_URL}/api/product-categories?populate=*`)
   .then(response => response.json())
   .then(data => {
       console.log(data);

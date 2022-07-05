@@ -1,43 +1,36 @@
-
-const contactForm = document.getElementById('contact-form')
+const contactForm = document.getElementById("contact-form");
 console.log(contactForm);
 
-contactForm.addEventListener('submit', (e) => {
-    e.preventDefault()
-    let name= contactForm['con_lastName'].value
-    let email = contactForm['con_email'].value
-    let message = contactForm['con_message'].value
+contactForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    let firstName = contactForm["con_firstName"].value;
+    let lastName = contactForm["con_lastName"].value;
+    let email = contactForm["con_email"].value;
+    let phone = contactForm["con_phone"].value;
+    let message = contactForm["con_message"].value;
 
-    console.log(name);
-    console.log(email);
-    console.log(message);
     (async () => {
-
-
-        const rawResponse = await fetch('http://159.223.67.62:1339/api/ezforms/submit', {
-        method: 'POST',
-        headers: {
-            'Accept': 'application/json',
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({  token: 'your-recaptcha-token',
-        formData:{
-            name: name,
-            email: email,
-            message: message
-        } })
-        });
+        const rawResponse = await fetch(
+            `${SERVER_URL}/api/contacts`,
+            {
+                method: "POST",
+                headers: {
+                    Accept: "application/json",
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                    data: {
+                        first_name: firstName,
+                        last_name: lastName,
+                        phone: phone,
+                        email: email,
+                        message: message,
+                    },
+                }),
+            }
+        );
         const content = await rawResponse.json();
-    
+
         console.log(content);
-  
     })();
-})
-
-
-
-
-
-
-
-
+});

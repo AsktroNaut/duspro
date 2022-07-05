@@ -15,7 +15,7 @@ console.log("searchKeyValue", searchKeyValue);
 const renderSearchGrid = document.querySelector('.product-grid-view')
 console.log(renderSearchGrid);
 
-fetch('http://159.223.67.62:1339/api/products?populate=*')
+fetch(`${SERVER_URL}/api/products?populate=*`)
     .then(response => response.json())
     .then(products => {
 
@@ -36,8 +36,8 @@ fetch('http://159.223.67.62:1339/api/products?populate=*')
                 <div class="product-item">
                     <div class="product-img">
                         <a href="single-product-variable.html">
-                            <img class="primary-img" src="http://159.223.67.62:1339${productProps.thumbnail.data[0].attributes.url}" alt="Product Images">
-                            <img class="secondary-img" src="http://159.223.67.62:1339${productProps.thumbnail.data[1].attributes.url}" alt="Product Images">
+                            <img class="primary-img" src="${SERVER_URL}${productProps.thumbnail.data[0].attributes.url}" alt="Product Images">
+                            <img class="secondary-img" src="${SERVER_URL}${productProps.thumbnail.data[1].attributes.url}" alt="Product Images">
                         </a>
                         
                     </div>
