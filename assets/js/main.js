@@ -1841,4 +1841,4 @@ function main($) {
 }
 
 // const SERVER_URL = "http://localhost:1337"
-const SERVER_URL = "http://159.223.67.62:1339"
+const SERVER_URL = "https://admin.shop-duspro.com"
