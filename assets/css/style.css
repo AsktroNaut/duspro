@@ -2143,7 +2143,7 @@ blockquote p {
   padding-right: 85px;
 }
 
-@media (max-width: 1199px) {
+@media (max-width: 1499px) {
   .slide-inner.style-2 .slide-content {
     width: 50%;
     padding-left: 30px;
@@ -5270,7 +5270,7 @@ blockquote p {
 /*  21. Breadcrumb
 /*----------------------------------------*/
 .breadcrumb-height {
-  height: 370px;
+  height: 300px;
 }
 
 .breadcrumb-heading {
